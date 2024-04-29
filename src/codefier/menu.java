@@ -420,6 +420,7 @@ public class menu extends javax.swing.JFrame {
     private void addpoclearbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addpoclearbtnActionPerformed
         tableModel.setRowCount(0); // Clear all existing rows
         tableModel.setRowCount(2);
+        //dsdsds
 
     }//GEN-LAST:event_addpoclearbtnActionPerformed
 

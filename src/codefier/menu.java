@@ -48,6 +48,9 @@ public class menu extends javax.swing.JFrame {
     public menu() {
         initComponents();
         
+        //dES
+        int D;
+        
         connection = DatabaseConnection.getConnection();
         
         
@@ -275,24 +278,30 @@ public class menu extends javax.swing.JFrame {
 
         addtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "POD NO.", "Remark"
+                "", "POD NO.", "Remark"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        addtable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         addtable.setRowHeight(25);
         addtable.setSelectionBackground(new java.awt.Color(255, 255, 153));
         addtable.getTableHeader().setReorderingAllowed(false);
@@ -329,16 +338,16 @@ public class menu extends javax.swing.JFrame {
                         .addGap(129, 129, 129)
                         .addComponent(addposavebtn))
                     .addGroup(AddPOPnlLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(23, 23, 23)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         AddPOPnlLayout.setVerticalGroup(
             AddPOPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AddPOPnlLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(55, 55, 55)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(AddPOPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addposavebtn)
                     .addComponent(addpoclearbtn))

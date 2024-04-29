@@ -24,6 +24,7 @@ public class DatabaseConnection {
     // Method to establish a connection to the database
     public static Connection getConnection() {
         try {
+            //sdfasddsa
             // Register JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Open a connection

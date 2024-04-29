@@ -18,6 +18,9 @@ public class Codefier {
         // TODO code application logic here
         menu menu = new menu();
         menu.setVisible(true);
+        
+        //wwwww
+        
     }
     
 }
